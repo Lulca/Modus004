@@ -63,26 +63,15 @@
 		background-color: $services-bg-color
 		padding: 24px 35px
 		border-radius: 8px
+		margin-top: 50px
 		h2
 			font-size: em(30px)
 		.btn-view
 			+button()	
 			margin-top: 10px
-
-// .item
-// 	width: 100%
-// 	height: 400px
-// 	background-image: url("../img/new-york-slide1.jpg")
-// 	background-size: cover
-// 	background-repeat: no-repeat
-
-// .owl-dot
-// 	height: 10px
-// 	width: 10px
-// 	background-color: black
-// 	border-radius: 5px
-// 	float: left
-
+.popup
+	.btn-close
+		+button($accent-color, #fff, 8px, 15px, darken($main-color, 10%))
 
 .carousel
 	.slide-title
@@ -91,14 +80,21 @@
 		border-radius: 5px
 		display: inline-block
 		padding: 8px 40px
+		opacity: 0
+		transition: all .9s 
+		transform: scale(0.7)
 	.slide-content
 		font-size: em(16px)
 		background-color: $slider-content-color
 		padding: 12px 40px
-		width: 90%
+		width: 60%
 		border-radius: 8px
 		font-family: 'Roboto-Light'
 		margin: 10px auto 0 auto
+		opacity: 0
+		transition: all .9s
+		transition-delay: 0.25s
+		transform: scale(0.7)
 	.carousel-caption
 		position: absolute
 		top: 30%
@@ -106,14 +102,42 @@
 		display: block
 		width: 100%
 		height: auto
+		max-height: 650px
 	.fa
 		position: absolute
 		top: 50%
 		font-size: em(35px)
+		background-color: $accent-color
+		padding: 5px 10px
 	.fa-angle-double-left
 		left: 0
+		border-radius: 0 5px 5px 0
 	.fa-angle-double-right
 		right: 0
+		border-radius: 5px 0 0 5px
+
+	.carousel-inner
+		.active
+			.slide-title
+				opacity: 1 
+				transform: scale(1)
+			.slide-content
+				opacity: 1 
+				transform: scale(1)
+	
+	.carousel-indicators
+		li
+			border-radius: 0
+			border: none
+			position: relative
+			top: 60px
+			height: 5px
+			width: 50px
+			background-color: lighten($slider-content-color, 30%)
+			&.active
+				background-color: $accent-color
+
+
 
 		
 
