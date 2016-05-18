@@ -15,47 +15,116 @@
 	padding: 5px 0
 
 .sf-menu
-	margin-bottom: 0
 	padding: 25px 0
-	.active
-		background-color: darken($main-color, 15%)
-		border-bottom: 3px solid darken($main-color, 20%) 
 	.portfolio
+		position: relative
+
+	>li
+		display: inline-block
+		border-radius: 5px
+		border-bottom: 3px solid transparent
+		+transition()
+		&.active
+			background-color: darken($main-color, 15%)
+			border-bottom: 3px solid darken($main-color, 20%)
 		>a
-			border-bottom: 3px solid transparent
+			padding: 10px 20px
+			text-transform: uppercase
+		&:hover
+			background-color: $accent-color
+			border-bottom: 3px solid darken($accent-color, 20%)
+
+	.activeSubLi
+		background-color: darken($accent-color, 5%)
+		border-bottom: 3px solid darken($accent-color, 25%)
+		border-radius: 5px 
+
 	.sub-menu
+		display: none
+		z-index: 100
+		position: absolute
 		margin-top: 10px
 		padding: 5px
 		background-color: darken($accent-color, 5%)
 		border-radius: 5px
-		padding-top: 0
 		li
 			background-color: $accent-color
 			margin-top: 5px
 			border-radius: 5px
-			a
-				text-transform: lowercase
-				border-radius: none
-				&:hover
-					border-bottom: none
-					border-radius: none
-					background-color: $main-color
-	li
-		background: transparent
-		&:hover
-			background-color: transparent
-	
-		a
-			text-transform: uppercase
-			border-left: none
-			border-top: none
-			padding: 5px 20px
-			border-radius: 5px
+			+transition()
 			&:hover
-				background-color: $accent-color
-				border-bottom: 3px solid darken($accent-color, 5%)
-		&.sfHover
-			background: transparent
+				background-color: $main-color
+			a
+				padding: 10px 20px
+				white-space: nowrap
+			&:first-child
+				margin-top: 0
+		.activeSub2Li
+			background-color: darken($main-color, 15%)
+		.sub-sub-menu
+			display: none
+			padding: 5px
+			background-color: darken($accent-color, 5%)
+			border-radius: 5px
+			position: absolute
+			left: 140px
+			top: 0
+.search
+	position: absolute		
+
+.fa-angle-down
+	position: relative
+	right: -2px
+
+.sub-portfolio
+	position: relative
+	.sub-angle
+		position: absolute
+		top: 10px
+		right: 5px
+		color: #fff
+		transform: rotate(270deg)
+
+	// margin-bottom: 0
+	// padding: 25px 0
+	// .active
+	// 	background-color: darken($main-color, 15%)
+	// 	border-bottom: 3px solid darken($main-color, 20%) 
+	// .portfolio
+	// 	>a
+	// 		border-bottom: 3px solid transparent
+	// .sub-menu
+	// 	margin-top: 10px
+	// 	padding: 5px
+	// 	background-color: darken($accent-color, 5%)
+	// 	border-radius: 5px
+	// 	padding-top: 0
+	// 	li
+	// 		background-color: $accent-color
+	// 		margin-top: 5px
+	// 		border-radius: 5px
+	// 		a
+	// 			text-transform: lowercase
+	// 			border-radius: none
+	// 			&:hover
+	// 				border-bottom: none
+	// 				border-radius: none
+	// 				background-color: $main-color
+	// >li
+	// 	background: transparent
+	// 	&:hover
+	// 		background-color: transparent
+	
+	// 	a
+	// 		text-transform: uppercase
+	// 		border-left: none
+	// 		border-top: none
+	// 		padding: 5px 20px
+	// 		border-radius: 5px
+	// 		&:hover
+	// 			background-color: $accent-color
+	// 			border-bottom: 3px solid darken($accent-color, 5%)
+
 
 .top-services
 	background-color: $main-bg-color

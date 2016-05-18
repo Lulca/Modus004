@@ -9,6 +9,7 @@
 
 ;(function ($) {
 	"use strict";
+	
 
 	var methods = (function () {
 		// private properties and methods go here
@@ -125,6 +126,8 @@
 			};
 
 		return {
+
+			
 			// public methods
 			hide: function (instant) {
 				if (this.length) {
@@ -155,13 +158,17 @@
 				if (!o) {
 					return this;
 				}
-				var $this = this.addClass(o.hoverClass),
+
+				if($(window).width() >= 992) {
+					var $this = this.addClass(o.hoverClass),
 					$ul = $this.children(o.popUpSelector);
 
-				o.onBeforeShow.call($ul);
-				$ul.stop(true, true).animate(o.animation, o.speed, function () {
-					o.onShow.call($ul);
-				});
+					o.onBeforeShow.call($ul);
+					$ul.stop(true, true).animate(o.animation, o.speed, function () {
+						o.onShow.call($ul);
+					});
+				}
+			
 				return this;
 			},
 			destroy: function () {

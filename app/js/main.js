@@ -1,12 +1,29 @@
 $(function () {
 
-	$('.top-line .sf-menu').superfish({
-		delay: 200
-	});
-
 	$('.carousel').carousel({
 		interval: 5000
 	})
 
-	// $('.modal').modal();
+
+	var portfolio = $('.portfolio');
+
+	portfolio.on('click', function(e) {
+		var that = $(this);
+		that.toggleClass('activeSubLi');
+		that.find('.sub-menu').slideToggle();
+
+	});
+
+	$('.portfolio li').on('click',function(e) {
+		e.stopPropagation();
+	});
+
+	var subPortfolio = $('.sub-portfolio');
+
+	subPortfolio.on('click', function(e) {
+		var that = $(this);
+		that.toggleClass('activeSub2Li');
+		that.find('.sub-sub-menu').slideToggle();
+	});
+
 });
