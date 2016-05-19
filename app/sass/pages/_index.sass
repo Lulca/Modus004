@@ -2,7 +2,7 @@
 
 .top-line
 	background-color: $main-color
-	background-image: url("../img/top-line-bg_03.png") 
+	background-image: url("../img/top-line-bg.png") 
 	background-repeat: repeat-x
 	background-position: 0 100%
 	a
@@ -31,7 +31,6 @@
 	padding: 25px 0
 	.portfolio
 		position: relative
-
 	>li
 		display: inline-block
 		border-radius: 5px
@@ -43,10 +42,6 @@
 		>a
 			padding: 10px 20px
 			text-transform: uppercase
-		// &:hover
-		// 	background-color: $accent-color
-		// 	border-bottom: 3px solid darken($accent-color, 20%)
-
 	.activeSubLi
 		background-color: darken($accent-color, 5%)
 		border-bottom: 3px solid darken($accent-color, 25%)
@@ -65,8 +60,6 @@
 			margin-top: 5px
 			border-radius: 5px
 			+transition()
-			// &:hover
-			// 	background-color: $main-color
 			a
 				padding: 10px 20px
 				white-space: nowrap
@@ -97,47 +90,6 @@
 		right: 5px
 		color: #fff
 		transform: rotate(270deg)
-
-	// margin-bottom: 0
-	// padding: 25px 0
-	// .active
-	// 	background-color: darken($main-color, 15%)
-	// 	border-bottom: 3px solid darken($main-color, 20%) 
-	// .portfolio
-	// 	>a
-	// 		border-bottom: 3px solid transparent
-	// .sub-menu
-	// 	margin-top: 10px
-	// 	padding: 5px
-	// 	background-color: darken($accent-color, 5%)
-	// 	border-radius: 5px
-	// 	padding-top: 0
-	// 	li
-	// 		background-color: $accent-color
-	// 		margin-top: 5px
-	// 		border-radius: 5px
-	// 		a
-	// 			text-transform: lowercase
-	// 			border-radius: none
-	// 			&:hover
-	// 				border-bottom: none
-	// 				border-radius: none
-	// 				background-color: $main-color
-	// >li
-	// 	background: transparent
-	// 	&:hover
-	// 		background-color: transparent
-	
-	// 	a
-	// 		text-transform: uppercase
-	// 		border-left: none
-	// 		border-top: none
-	// 		padding: 5px 20px
-	// 		border-radius: 5px
-	// 		&:hover
-	// 			background-color: $accent-color
-	// 			border-bottom: 3px solid darken($accent-color, 5%)
-
 
 .top-services
 	.wrap-services
@@ -218,7 +170,90 @@
 			&.active
 				background-color: $accent-color
 
+.choose-us
+	margin-top: 50px
+	ul
+		margin-bottom: 50px
+	h3
+		text-transform: capitalize
+		font-size: em(16px)
+		margin-bottom: 25px
+	h4
+		margin-top: 25px
+		text-transform: uppercase
+	.speed
+		margin: 50px 0
+	li
+		line-height: em(26px)
+		.fa-arrow-right
+			color: $accent-color
+	.jon-doe
+		margin-left: 30px
+		display: inline-block
+		margin-top: 10px
+	a
+		display: inline
+	.img 
+		position: relative
+		display: inline-block
+	.choose-number
+		position: absolute
+		font-family: 'Roboto-Bold'
+		font-size: em(30px)
+		top: 20px
+		right: 0
+		left: 0
 
+footer
+	background-image: url('../img/bottom-line-bg.png');
+	background-repeat: repeat-x
+	font-family: 'Roboto-Light'
+	color: #fff
+	background-color: $main-color
+	padding-top: 50px
+	font-size: em(13px)
+	ul
+		padding-left: 20px
+	a
+		color: #fff
+		display: inline-block
+		+transition()
+		&:hover
+			color: darken($main-color, 30%)
+	h3
+		margin-bottom: 25px
+	.modus-white
+		font-size: em(18px)
+		font-family: "Roboto-Bold"
+	.footer-paragraph
+		margin-bottom: 25px
+	.mail
+		font-size: em(20px)
+		font-family: 'Roboto-Italic'
+		padding-left: 10px
+	.gray-text
+		color: darken($main-color, 30%)
+		font-size: em(20px)
+	.from-blog
+		margin-bottom: 20px
+		h3
+			font-family: 'Roboto-Light'
+			font-style: italic
+		img
+			float: left
+			margin-right: 20px
+		.gray-regular-text
+			color: darken($main-color, 30%)
+		.blog
+			text-transform: uppercase
+			font-family: 'Roboto-Bold'
+			font-style: normal
 
-		
-
+.social
+	background-color: darken($main-color, 10%)
+	padding: 13px 0
+	margin-top: 45px
+	.social-icons
+		float: right
+		i
+			padding-left: 10px

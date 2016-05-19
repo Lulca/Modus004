@@ -8215,6 +8215,43 @@ button.close {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/social/icomoon.eot");
+  src: url("../fonts/social/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/social/icomoon.woff") format("woff"), url("../fonts/social/icomoon.ttf") format("truetype"), url("../fonts/social/icomoon.svg#font-name") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.social i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\e900";
+}
+
+.icon-rss:before {
+  content: "\ea9b";
+}
+
+.icon-facebook:before {
+  content: "\e901";
+}
+
+.icon-google:before {
+  content: "\e902";
+}
+
 .toggle-mnu {
   display: block;
   width: 28px;
@@ -8259,6 +8296,24 @@ button.close {
   transform: rotate(-45deg) translate(6px, -7px);
 }
 
+.white-bg {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.italic-text {
+  font-family: 'Roboto-Italic';
+}
+
+.accent-text {
+  color: #e8645a;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
 body, h1, h2, h3, h4, p, span, ul, li, a {
   margin: 0;
   padding: 0;
@@ -8299,7 +8354,7 @@ b, strong, h1, h2, h3, h4 {
 
 .top-line {
   background-color: #76c7c0;
-  background-image: url("../img/top-line-bg_03.png");
+  background-image: url("../img/top-line-bg.png");
   background-repeat: repeat-x;
   background-position: 0 100%;
 }
@@ -8563,6 +8618,157 @@ b, strong, h1, h2, h3, h4 {
 
 .carousel .carousel-indicators li.active {
   background-color: #e8645a;
+}
+
+.choose-us {
+  margin-top: 50px;
+}
+
+.choose-us ul {
+  margin-bottom: 50px;
+}
+
+.choose-us h3 {
+  text-transform: capitalize;
+  font-size: 1.23077em;
+  margin-bottom: 25px;
+}
+
+.choose-us h4 {
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+.choose-us .speed {
+  margin: 50px 0;
+}
+
+.choose-us li {
+  line-height: 2em;
+}
+
+.choose-us li .fa-arrow-right {
+  color: #e8645a;
+}
+
+.choose-us .jon-doe {
+  margin-left: 30px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.choose-us a {
+  display: inline;
+}
+
+.choose-us .img {
+  position: relative;
+  display: inline-block;
+}
+
+.choose-us .choose-number {
+  position: absolute;
+  font-family: 'Roboto-Bold';
+  font-size: 2.30769em;
+  top: 20px;
+  right: 0;
+  left: 0;
+}
+
+footer {
+  background-image: url("../img/bottom-line-bg.png");
+  background-repeat: repeat-x;
+  font-family: 'Roboto-Light';
+  color: #fff;
+  background-color: #76c7c0;
+  padding-top: 50px;
+  font-size: 1em;
+}
+
+footer ul {
+  padding-left: 20px;
+}
+
+footer a {
+  color: #fff;
+  display: inline-block;
+  transition: all 0.4s ease-in-out;
+}
+
+footer a:hover {
+  color: #30746e;
+}
+
+footer h3 {
+  margin-bottom: 25px;
+}
+
+footer .modus-white {
+  font-size: 1.38462em;
+  font-family: "Roboto-Bold";
+}
+
+footer .footer-paragraph {
+  margin-bottom: 25px;
+}
+
+footer .mail {
+  font-size: 1.53846em;
+  font-family: 'Roboto-Italic';
+  padding-left: 10px;
+}
+
+footer .gray-text {
+  color: #30746e;
+  font-size: 1.53846em;
+}
+
+footer .from-blog {
+  margin-bottom: 20px;
+}
+
+footer .from-blog h3 {
+  font-family: 'Roboto-Light';
+  font-style: italic;
+}
+
+footer .from-blog img {
+  float: left;
+  margin-right: 20px;
+}
+
+footer .from-blog .gray-regular-text {
+  color: #30746e;
+}
+
+footer .from-blog .blog {
+  text-transform: uppercase;
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+}
+
+.social {
+  background-color: #52b8af;
+  padding: 13px 0;
+  margin-top: 45px;
+}
+
+.social .social-icons {
+  float: right;
+}
+
+.social .social-icons i {
+  padding-left: 10px;
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+  .choose-us h4 {
+    font-size: 14px;
+  }
+  .choose-us .choose-number {
+    font-size: 1.92308em;
+    top: 12px;
+  }
 }
 
 @media only screen and (min-width: 991px) {
