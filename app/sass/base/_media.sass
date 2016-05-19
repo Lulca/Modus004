@@ -2,6 +2,18 @@
 
 // large devices
 
+@media only screen and (min-width: 991px)
+	.sf-menu
+		>li
+			&:hover
+				background-color: $accent-color
+				border-bottom: 3px solid darken($accent-color, 20%)
+
+		.sub-menu
+			li
+				&:hover
+					background-color: $main-color
+
 @media only screen and (max-width:1199px)
 	.top-services
 		text-align: center
@@ -17,6 +29,12 @@
 		.fa	
 			top: 40%
 
+	.menu-trigger
+		display: none
+	.sf-menu
+		display: block
+
+
 @media only screen and (max-width: 991px)
 	.carousel
 		.fa
@@ -27,6 +45,45 @@
 			border-radius: 0 5px 5px 0
 		.fa-angle-double-right
 			border-radius: 5px 0 0 5px
+
+	.menu-trigger
+		display: block
+
+	.sf-menu
+		display: none
+		>li
+			display: block // new
+			+transition(all, 0.1s)// new
+			&.active
+				background-color: $main-color // new
+				border-bottom: 3px solid transparent // new
+			>a
+				padding: 10px 20px
+				text-transform: uppercase
+				text-align: center // new
+			// &:hover
+			// 	background-color: $main-color
+			// 	border-bottom: 3px solid transparent //new
+
+		.activeSubLi
+			background-color: darken($accent-color, 5%)
+			border-bottom: 3px solid darken($accent-color, 25%)
+			border-radius: 5px 
+		.search
+			display: none
+
+		.sub-menu
+			width: 100%
+			display: none
+			.sub-sub-menu
+				width: 100% // new
+				left: 0 //new
+				top: 40px //new
+				li
+					padding-left: 90px //new
+	.sub-portfolio
+		.sub-angle
+			transform: rotate(0deg) // end site navigation //new
 
 @media only screen and (max-width: 767px)
 	.carousel

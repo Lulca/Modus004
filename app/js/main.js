@@ -14,7 +14,7 @@ $(function () {
 			.find('.sub-sub-menu').slideToggle(200);
 		}
 		that.toggleClass('activeSubLi');
-		that.find('.sub-menu').slideToggle(200);
+		that.find('.sub-menu').slideToggle(2);
 
 	});
 
@@ -28,6 +28,25 @@ $(function () {
 		var that = $(this);
 		that.toggleClass('activeSub2Li');
 		that.find('.sub-sub-menu').slideToggle(200);
+	});
+
+	$(".toggle-mnu").click(function() {
+		$(this).toggleClass("on");
+		$(".main-mnu").slideToggle(200);
+	});
+
+	$('.menu-trigger').click(function() {
+		$('.sf-menu').slideToggle(200);
+	});
+
+	$(window).resize(function() {
+		if($(window).width() >= 992) {
+			$('.sf-menu').slideDown();
+		}
+		if($(window).width() < 992) {
+			$('.sf-menu').slideUp();
+			$('.toggle-mnu').removeClass('on');
+		}
 	});
 
 });
