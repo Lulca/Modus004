@@ -1,10 +1,5 @@
 $(function () {
 
-	$('.carousel').carousel({
-		interval: 5000
-	})
-
-
 	var portfolio = $('.portfolio');
 
 	portfolio.on('click', function(e) {
@@ -47,6 +42,41 @@ $(function () {
 			$('.sf-menu').slideUp();
 			$('.toggle-mnu').removeClass('on');
 		}
+	});
+
+
+	$('.slides').owlCarousel({
+		margin:30,
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				nav:true,
+				loop:true
+			},
+			400:{
+				items:2,
+				nav:true,
+				loop:true
+			},
+
+			600:{
+				items:3,
+				nav:true,
+				loop:true
+			},
+			1000:{
+				items:5,
+				nav:true,
+				loop:true
+			}
+		},
+		loop:true,
+
+		navText: [
+		'<i class="fa fa-chevron-left nav-bg" aria-hidden="true"></i>',
+		'<i class="fa fa-chevron-right nav-bg" aria-hidden="true"></i>'
+		]
 	});
 
 });
