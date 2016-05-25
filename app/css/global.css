@@ -8256,7 +8256,7 @@ button.close {
   display: block;
   width: 28px;
   height: 28px;
-  margin-top: 14px;
+  margin-top: 0px;
 }
 
 .toggle-mnu span:after, .toggle-mnu span:before {
@@ -8365,6 +8365,16 @@ b, strong, h1, h2, h3, h4 {
 
 .logo {
   padding: 25px 0;
+  position: relative;
+}
+
+.logo a {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.logo a img {
+  padding-left: 20px;
 }
 
 .search {
@@ -8373,8 +8383,11 @@ b, strong, h1, h2, h3, h4 {
 
 .menu-trigger {
   text-align: center;
-  padding-bottom: 10px;
   display: none;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  height: 40px;
 }
 
 .menu-trigger a {
@@ -8382,7 +8395,6 @@ b, strong, h1, h2, h3, h4 {
 }
 
 .menu-trigger .toggle-mnu {
-  margin-left: 20px;
   margin-right: auto;
 }
 
@@ -8421,7 +8433,6 @@ b, strong, h1, h2, h3, h4 {
   background-color: #e54f44;
   border-bottom: 3px solid #ab2218;
   border-radius: 5px;
-  transition: all .8s;
 }
 
 .sf-menu .sub-menu {
@@ -8907,6 +8918,26 @@ footer .from-blog .blog {
   margin-left: 10px;
 }
 
+.slide-container-3d .slides-3d {
+  position: relative;
+}
+
+.slide-container-3d .slides-3d .slides-3d:after {
+  visibility: hidden;
+  visibility-display: block;
+  visibility-display-content: "heloo";
+  visibility-display-clear: both;
+  visibility-display-height: 0;
+}
+
+.slide-container-3d .slides-3d li {
+  position: absolute;
+  max-width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
 @media only screen and (min-width: 991px) and (max-width: 1199px) {
   .choose-us h4 {
     font-size: 14px;
@@ -8964,7 +8995,7 @@ footer .from-blog .blog {
     border-radius: 5px 0 0 5px;
   }
   .menu-trigger {
-    display: block;
+    display: inline-block;
   }
   .sf-menu {
     display: none;

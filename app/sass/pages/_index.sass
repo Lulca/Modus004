@@ -10,18 +10,26 @@
 
 .logo
 	padding: 25px 0
+	position: relative
+	a
+		display: inline-block
+		margin-left: 20px
+		img
+			padding-left: 20px
 
 .search
 	padding: 5px 0
 
 .menu-trigger
 	text-align: center
-	padding-bottom: 10px
 	display: none
+	position: absolute
+	top: 27px
+	left: 0
+	height: 40px
 	a
 		color: transparent
 	.toggle-mnu
-		margin-left: 20px
 		margin-right: auto
 		span
 			width: 35px
@@ -47,7 +55,6 @@
 		background-color: darken($accent-color, 5%)
 		border-bottom: 3px solid darken($accent-color, 25%)
 		border-radius: 5px 
-		transition: all .8s
 	.sub-menu
 		display: none
 		z-index: 100
@@ -341,3 +348,46 @@ footer
 	.fa-chevron-left
 		margin-right: 10px
 		margin-left: 10px
+
+// .card-container
+// 	height: 200px
+// 	width: 200px
+// 	perspective: 1000px
+// 	img
+// 		height: 200px
+// 		width: 200px
+// 	.card
+// 		position: relative
+// 		top: 0
+// 		left: 0
+// 		text-align: center
+// 		line-height: 200px
+// 		color: #fff
+// 		background: #5677fc
+// 		width: 200px
+// 		height: 200px
+// 		margin: 20px
+// 		transform: rotateY(45deg)
+// 		transition: all .5s ease
+// 		transform-style: preserve-3d
+// 	.rotate
+// 		left: 150px
+// 		transform: rotateY(0deg)
+ 
+.slide-container-3d		
+	.slides-3d
+		position: relative
+		.slides-3d:after
+			visibility: hidden
+	  		display: block
+	        content: "heloo"
+	        clear: both
+	        height: 0	
+		li
+			position: absolute
+			max-width: 500px
+			margin: auto
+			left: 0
+			right: 0
+
+

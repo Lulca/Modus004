@@ -1,4 +1,10 @@
+
+
+
+
+
 $(function () {
+
 
 	var portfolio = $('.portfolio');
 
@@ -9,7 +15,12 @@ $(function () {
 			.find('.sub-sub-menu').slideToggle(200);
 		}
 		that.toggleClass('activeSubLi');
-		that.find('.sub-menu').slideToggle(2);
+		
+		if (that.hasClass('activeSubLi')) {
+			that.find('.sub-menu').slideDown(200);
+		} else {
+			that.find('.sub-menu').slideUp(1);
+		}
 
 	});
 
@@ -30,16 +41,16 @@ $(function () {
 		$(".main-mnu").slideToggle(200);
 	});
 
-	$('.menu-trigger').click(function() {
+	$('.toggle-mnu').click(function() {
 		$('.sf-menu').slideToggle(200);
 	});
 
 	$(window).resize(function() {
 		if($(window).width() >= 992) {
-			$('.sf-menu').slideDown();
+			$('.sf-menu').slideDown(1);
 		}
 		if($(window).width() < 992) {
-			$('.sf-menu').slideUp();
+			$('.sf-menu').slideUp(1);
 			$('.toggle-mnu').removeClass('on');
 		}
 	});
@@ -78,5 +89,9 @@ $(function () {
 		'<i class="fa fa-chevron-right nav-bg" aria-hidden="true"></i>'
 		]
 	});
+
+	// $('.card').on('click', function(){
+	// 	$(this).addClass('rotate');
+	// });
 
 });
