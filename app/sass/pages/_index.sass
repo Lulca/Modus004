@@ -55,6 +55,8 @@
 		background-color: darken($accent-color, 5%)
 		border-bottom: 3px solid darken($accent-color, 25%)
 		border-radius: 5px 
+	.search
+			display: none
 	.sub-menu
 		display: none
 		z-index: 100
@@ -374,20 +376,20 @@ footer
 // 		left: 150px
 // 		transform: rotateY(0deg)
  
-.slide-container-3d		
-	.slides-3d
-		position: relative
-		.slides-3d:after
-			visibility: hidden
-	  		display: block
-	        content: "heloo"
-	        clear: both
-	        height: 0	
+.slider-galery		
+	.slider-list
+		position: relative	
 		li
+			display: block
 			position: absolute
-			max-width: 500px
+			max-width: 200px
 			margin: auto
 			left: 0
 			right: 0
+			top: 0
+			z-index: 0
+			&.active
+				position: relative
+				z-index: 1
 
 

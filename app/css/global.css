@@ -8435,6 +8435,10 @@ b, strong, h1, h2, h3, h4 {
   border-radius: 5px;
 }
 
+.sf-menu .search {
+  display: none;
+}
+
 .sf-menu .sub-menu {
   display: none;
   z-index: 100;
@@ -8918,24 +8922,24 @@ footer .from-blog .blog {
   margin-left: 10px;
 }
 
-.slide-container-3d .slides-3d {
+.slider-galery .slider-list {
   position: relative;
 }
 
-.slide-container-3d .slides-3d .slides-3d:after {
-  visibility: hidden;
-  visibility-display: block;
-  visibility-display-content: "heloo";
-  visibility-display-clear: both;
-  visibility-display-height: 0;
-}
-
-.slide-container-3d .slides-3d li {
+.slider-galery .slider-list li {
+  display: block;
   position: absolute;
-  max-width: 500px;
+  max-width: 200px;
   margin: auto;
   left: 0;
   right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.slider-galery .slider-list li.active {
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1199px) {
