@@ -8978,23 +8978,9 @@ footer .from-blog .blog {
 .slider-galery .slider-list .active-item {
   max-width: 300px;
   z-index: 3;
-}
-
-.slider-galery .slider-list .left-item-move {
   transform: rotateY(0deg);
   left: 0px;
-  z-index: 2;
-}
-
-.slider-galery .slider-list .right-item-move {
-  transform: rotateY(0deg);
-  left: 0px;
-  z-index: 2;
-}
-
-.slider-galery .slider-list .active-item-move {
-  max-width: 300px;
-  z-index: 4;
+  z-index: 3;
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1199px) {

@@ -123,6 +123,32 @@ var topNavigation = (function(){
 var galery = (function(){
 
 
+	// function move from left-right to center
+
+	function toCenter ($this,degree) {
+		var
+			volumeGalery = $this.closest('.3d-galery');
+			leftItem = volumeGalery.find('.left-item');
+			activeItem = volumeGalery.find('.active-item');
+
+		$this.animate({
+			'-webkit-transform': 'rotateY(' + degree + 'deg)',
+            '-moz-transform': 'rotateY(' + degree + 'deg)',
+            '-ms-transform': 'rotateY(' + degree + 'deg)',
+            '-o-transform': 'rotateY(' + degree + 'deg)',
+            'transform': 'rotateY(' + degree + 'deg)',
+            'zoom': 1,
+			'left': '0px',
+			'z-index': '4',
+			'max-width': '300px'
+
+		}, 1000, function(){
+			
+		});
+	}
+
+	// function mone from center to right-left
+
 
 	return {
 		init: function() {
@@ -131,8 +157,11 @@ var galery = (function(){
 
 			$('.left-item').on('click', function(){
 				$this = $(this);
-				$this.addClass('left-item-move active-item-move');
+				// $this.addClass('left-item-move active-item-move');
+				toCenter($this,0);
 			});
+
+
 
 
 		}
