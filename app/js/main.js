@@ -6,23 +6,77 @@ var topNavigation = (function(){
 		init: function() {
 			var that = this;
 
-			$('.portfolio').on('click', function(e) {
+			var portfolio = $('.portfolio');
+
+			portfolio.on('click', function(e) {
+				e.preventDefault()
 
 				that.toggleMenu($(this));
 
 			});
 
+		
+
+			// portfolio.on('mouseover', function(){
+			// 	if( $(window).width() > 992) {
+			// 		$this = $(this);
+
+			// 		$this.addClass('activeSubLi').find('.sub-menu').fadeIn(1);
+			// 	}
+
+			// });
+
+			// portfolio.on('mouseleave', function(){
+			// 	if( $(window).width() > 992) {
+			// 		$this = $(this);
+			// 		$this.removeClass('activeSubLi');
+			// 		setTimeout(
+			// 			function() {
+			// 				if(!$this.hasClass('activeSubLi')) {
+			// 					$this.find('.sub-menu').fadeOut(200);	
+			// 				}	
+			// 			},
+			// 			200);		
+			// 	}
+			// });
+
 			$('.portfolio li').on('click',function(e) {
 				e.stopPropagation();
+				e.preventDefault();
 			});
 
 			var subPortfolio = $('.sub-portfolio');
 
 			subPortfolio.on('click', function(e) {
+				e.preventDefault();
 				var that = $(this);
 				that.toggleClass('activeSub2Li');
 				that.find('.sub-sub-menu').fadeToggle(200);
 			});
+
+			// subPortfolio.on('mouseover', function(){
+			// 	if( $(window).width() > 992) {
+			// 		$this = $(this);
+
+			// 		$this.addClass('activeSub2Li').find('.sub-sub-menu').fadeIn(1);
+			// 	}
+					
+			// });
+
+			// subPortfolio.on('mouseleave', function(){
+			// 	$this = $(this);
+			// 	if( $(window).width() > 992) {
+					
+			// 		$this.removeClass('activeSub2Li');
+			// 		setTimeout(
+			// 			function() {
+			// 				if($this.hasClass('activeSub2Li')) {
+			// 					$this.find('.sub-sub-menu').fadeOut(200);	
+			// 				}	
+			// 			},
+			// 			200);		
+			// 	}
+			// });
 
 			$(".toggle-mnu").click(function() {
 				$(this).toggleClass("on");
@@ -46,6 +100,7 @@ var topNavigation = (function(){
 
 
 		toggleMenu: function (that) {
+
 			if(that.find('.sub-portfolio').hasClass('activeSub2Li')) {
 				that.find('.sub-portfolio').removeClass('activeSub2Li')
 				.find('.sub-sub-menu').fadeToggle(200);
@@ -65,11 +120,34 @@ var topNavigation = (function(){
 })();
 
 
+var galery = (function(){
+
+
+
+	return {
+		init: function() {
+
+			var that = this;
+
+			$('.left-item').on('click', function(){
+				$this = $(this);
+				$this.addClass('left-item-move active-item-move');
+			});
+
+
+		}
+	}
+
+})();
+
+
 
 
 $(function () {
 
 	topNavigation.init();
+
+	galery.init();
 
 
 	$('.slides').owlCarousel({

@@ -378,18 +378,51 @@ footer
  
 .slider-galery		
 	.slider-list
-		position: relative	
+		position: relative
+		perspective: 900px
+		$maxWidthItem: 250px	
 		li
 			display: block
 			position: absolute
-			max-width: 200px
+			max-width: $maxWidthItem
 			margin: auto
 			left: 0
 			right: 0
 			top: 0
+			bottom: 0
 			z-index: 0
 			&.active
 				position: relative
-				z-index: 1
+		.item
+			transition: all 2s ease
+			transform-style: preserve-3d
+			top: 10px
+		.left-item
+			@extend .item
+			transform: rotateY(45deg)
+			left: -400px
+			z-index: 2
+		.right-item
+			@extend .item
+			transform: rotateY(-45deg)
+			left: 400px
+			z-index: 2
+		.active-item
+			max-width: 300px
+			z-index: 3
+
+		.left-item-move
+			
+			transform: rotateY(0deg)
+			left: 0px
+			z-index: 2
+		.right-item-move
+			
+			transform: rotateY(0deg)
+			left: 0px
+			z-index: 2
+		.active-item-move
+			max-width: $maxWidthItem + 50px
+			z-index: 4				
 
 
