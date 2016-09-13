@@ -8934,6 +8934,7 @@ footer .from-blog .blog {
 .bottom-slider .fa-chevron-left {
   margin-right: 10px;
   margin-left: 10px;
+  margin-left-transform: rotateY(0deg);
 }
 
 .slider-galery .slider-list {
